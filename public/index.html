@@ -1,0 +1,65 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Компьютерная алгебра</title>
+    <link href="CSS/boilerplate.css" rel="stylesheet" type="text/css">
+    <link href="CSS/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="header" class="fluid">
+    <hgroup id="head" class="fluid">
+        <div id="head_text" class="fluid">
+            <header id="header_t" class="fluid">Компьютерная алгебра, часть 1 </header>
+        </div>
+        <div id="description" class="fluid">Данный сервис предназначен для предоставления пользователю возможности
+            увидеть любое рациональное выражение (знаки + - * / ) в виде дерева его решения.
+        </div>
+        <div id="example" class="fluid">Пример входных данных: 4.5-6/(1-2.5)^2-1<br>
+            Внимание! Для ввода доступны только следующие символы: . 0-9 + - * / ^ ( ) a-z A-Z 0-9
+            Возможность ввода других символов отключена из соображений безопасности.<br>
+        </div>
+        <div id="ds_area" class="fluid">Узлы операций в построенном дереве интерактивны, при нажатии на один из них появится результат вычисления его поддерева. <br>
+            В данной версии сайта доступен ввод переменных, имя переменной должно начинаться с буквы(a-zA-Z) и далее содержать любые символы из данного набора a-z A-Z 0-9 и _.<br>
+        </div>
+    </hgroup>
+</div>
+<div id="navigation_panel" class="fluid">
+    <form id="mainForm">
+        <label for="racText">Введите рациональное выражение:</label>
+        <input name="racText" type="text" class="textbox" id="racText" size="50">
+        <input type="button" name="generateBtn" id="generateBtn" value="Генерировать дерево" class="button">
+        <input type="button" name="historyBtn" id="historyBtn" value=">↓<" class="button" title="История запросов">
+    </form>
+</div>
+<hgroup id="error_area" class="fluid">
+    <div id="error_text" class="fluid"></div>
+</hgroup>
+<div id="svg_panel" class="fluid">
+    <svg>
+         <g>
+         </g>
+    </svg>
+</div>
+<footer id="e-mail_area" class="fluid"><a href="mailto:ivanov.kir.m@yandex.ru"></a>Проект подготовлен Ивановым Кириллом,
+    группа 402 ФКН ПМИ НИУ-ВШЭ. Мой адрес электронной почты: <a href="mailto:ivanov.kir.m@yandex.ru">ivanov.kir.m@yandex.ru</a>
+</footer>
+<canvas id="canvas"></canvas>
+<script src="LIBS/d3.min.js"></script>
+<script src="LIBS/jquery-1.11.1.min.js"></script>
+<script src="LIBS/canvg.js"></script>
+<script src="LIBS/StackBlur.js"></script>
+<script src="LIBS/rgbcolor.js"></script>
+<script src="LIBS/Base64.js"></script>
+<script src="LIBS/circular-json.js"></script>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+
+<script src="JS/Parse_req.js"></script>
+<script src="JS/Print.js"></script>
+<script src="JS/Set_page.js"></script>
+
+<script>page()</script>
+
+
+</body>
+</html>
